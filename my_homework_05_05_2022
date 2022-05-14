@@ -1,0 +1,34 @@
+/*Правите програма за фитнес упражнения и давате опция на трениращия да 
+избере каква е целта на тренировката му, като съобразно с това му давате 
+инструкции: 
+1. Сила - "Прави упражненията с максималната тежест, на която си способен и 6 
+повторения!";
+2. Издръжливост - "Прави упражненията с малка тежест 5-10 кг и 20 
+повторения!";
+3. Тонус - "Прави упражненията с умерена тежест до 20 кг и 15 повторения!"*/
+
+#include<stdio.h>
+#include <string.h>
+int main()
+{
+    int purpose;
+ printf("What is your purpose?");
+ scanf("%d",&purpose);
+ if(purpose==1)
+ {
+     printf("You must do exercise with 6 iteration.\n");
+ }
+  else if(purpose==2)
+  { printf("You must do exercise with 20 iteration.\n");
+  }
+  else if(purpose==3)
+  {printf("You must do exercise with 15 iteration.\n");
+      
+  }
+  else 
+  {
+      printf("You can eat switss.\n");
+     
+  }
+  return 0;
+}
