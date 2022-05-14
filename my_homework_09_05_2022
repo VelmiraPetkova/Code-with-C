@@ -1,0 +1,36 @@
+//Намерете произведението на четните числа от 1 до 20
+
+#include<stdio.h>
+int main()
+{
+     int A=2;
+     long int sSum=1;
+     
+     while (A<=20)
+     {
+         
+         sSum=sSum*A;
+         A=A+2;
+         printf("%ld\n",sSum);
+     }
+       printf("%ld\n",sSum);  
+    
+}
+
+-----------------------
+//Намерете произведението на нечетните числа от 1 до 20
+
+#include <stdio.h>
+int main()
+{
+    int A=1;
+    long int sSum=1;
+    
+    do { sSum=sSum*A;
+         A=A+2;
+       printf("%ld\n", sSum);
+        
+    }
+    while (A<=19);
+    
+    return 0;
