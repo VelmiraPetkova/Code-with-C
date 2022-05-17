@@ -35,3 +35,26 @@ switch(A)
  return 0;
     
 }
+
+--------------------------------
+#include <stdio.h>
+int main()
+{
+    int A;
+    scanf("%d",&A);
+    
+    if (A==1)
+    {printf("Monday.\n");
+    }
+    else if (A==2)
+    { printf("Tuesday.\n");  
+    }
+    else if (A==3)
+    { printf("Wednesday.\n");    
+    }
+    else
+    { printf("invalid_num");
+    }
+return 0;    
+    
+}
