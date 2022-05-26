@@ -1,0 +1,29 @@
+//Сума от вторите степени на числата
+
+#include<stdio.h>
+int main()
+{
+    int i;
+    //int sSum;
+    
+    for(i=1;i<200;i++)
+    {
+        int sSum=i*i;
+    
+    printf("%d\n", sSum);
+        
+    }
+}
+//
+#include<stdio.h>
+int main()
+{
+  printf("    *\n");
+  printf("   * *\n");
+  printf("*\t*\n");
+  printf("*\t*\n");
+  printf("*\t*\n");
+  printf("   * *\n");
+  printf("    *\n");
+  
+}
