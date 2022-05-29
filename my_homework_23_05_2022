@@ -1,0 +1,188 @@
+#include <stdio.h>
+#define SIZE 8
+#include <stdbool.h>
+int main()
+
+{
+    int A[SIZE];
+    int i;
+    bool B=1;
+//четем
+   
+   
+    for(i=0;i<SIZE;i++)
+    {
+        printf("Enter num [ %d ]=",i);
+        scanf("%d",&A[i]);
+    }
+
+    for(i=0 ;i<SIZE;i++)
+    {
+       
+         if (A[i]!=A[SIZE-1-i])
+         {
+            //printf("Yes\n");
+         }
+         else 
+         {
+             printf("No\n");
+         }
+    }
+
+
+/*извеждаме
+    for(i=0;i<SIZE;i++)
+    {
+       printf("A[%d]=%d\n",i,A[i]);
+    }    
+        */
+  return 0;  
+}
+---------------------------
+#include <stdio.h>
+#define SIZE 8
+#include <stdbool.h>
+int main()
+
+{
+    int A[SIZE];
+    int i;
+    bool B=1;
+//четем
+   
+   
+    for(i=0;i<SIZE;i++)
+    {
+        printf("Enter num [ %d ]=",i);
+        scanf("%d",&A[i]);
+    }
+
+    for(i=0 ;i<SIZE;i++)
+    {
+       
+         if (A[i]!=A[SIZE-1-i])
+         {
+            B=0;
+            //printf("Yes\n");
+            break;
+         }
+   
+    }
+   
+   if(B==1)
+   {printf("YES\n",B);}
+   else 
+   {printf("NO\n",B);}
+
+
+/*извеждаме
+    for(i=0;i<SIZE;i++)
+    {
+       printf("A[%d]=%d\n",i,A[i]);
+    }    
+        */
+  return 0;  
+}
+-------------------------------------
+//Програма която проверява дали записаното число е огледално на последното
+#include <stdio.h>
+#define SIZE 8
+#include <stdbool.h>
+int main()
+
+{
+    int A[SIZE];
+    int i;
+    bool B=1;
+//четем
+   
+   
+    for(i=0;i<SIZE;i++)
+    {
+        printf("Enter num [ %d ]=",i);
+        scanf("%d",&A[i]);
+    }
+
+    for(i=0 ;i<SIZE/2;i++)
+    {
+       
+         if (A[i]!=A[SIZE-1-i])
+         {
+            B=0;
+            //printf("Yes\n");
+            break;
+         }
+   
+    }
+   
+   if(B==1)
+   {printf("YES\n");}
+   else 
+   {printf("NO\n");}
+
+
+/*извеждаме
+    for(i=0;i<SIZE;i++)
+    {
+       printf("A[%d]=%d\n",i,A[i]);
+    }    
+        */
+  return 0;  
+}
+---------------------------------------------
+//да се намери и отпечата най-горямото число от масив
+#include <stdio.h>
+#define SIZE 10
+int main ()
+{
+    float A[SIZE];  //дефиниране на масив
+    int i; //индекс на масива
+    
+//Инициализиране на масив    
+      for(i=0;i<SIZE;i++)
+      {
+        printf("Enter num [%d]=",i);
+        scanf("%f",&A[i]);
+      }
+    
+   float max_val=A[0];
+  
+   for(i=0;i<SIZE;i++)
+  {
+      if(max_val<A[i])
+      {
+          max_val=A[i];
+      }
+  }
+
+  printf("Max num is %f\n",max_val);
+  return 0;
+    
+}
+
+----------------------------------------
+//Да се извадят нечетните елементи на масива
+#include <stdio.h>
+#define SIZE 10
+int main()
+{
+    int A[SIZE];
+    int i;
+    
+    for(i=0;i<SIZE;i++)
+    {
+        printf("Enter num [%d]=",i);
+        scanf("%d",&A[i]);
+    }
+
+  for(i=0;i<SIZE;i++)
+  {
+     if(A[i]%2!=0)
+     {
+       printf("%d\n",A[i]);  
+     }
+  }
+
+ return 0;
+    
+}
