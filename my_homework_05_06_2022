@@ -1,0 +1,145 @@
+#include <stdio.h>
+float readR(); //прототип
+
+int main ()
+
+{ 
+   
+   float A=readR();
+   float B=readR();
+   float V=readR();
+   float Ssum=A*B*V;
+   
+   printf("%f", Ssum);
+   return 0;
+   
+}
+    
+float readR() //Функцията
+
+{
+  float n;
+  scanf("%f", &n);
+  return n;
+}
+
+
+#include <stdio.h>
+float readR(); //прототип
+
+int main ()
+
+{ 
+   
+   float A=readR();
+   float B=readR();
+   float V=readR();
+   float Ssum=A*B*V;
+   
+   printf("%f", Ssum);
+   return 0;
+   
+}
+    
+float readR() //Функцията
+
+{
+  float n;
+  scanf("%f", &n);
+  return n;
+}
+
+----------------
+//Напишете функция с име char readC( ), която чете един символ. Прочетеният
+//символ се връща като стойност на функцията.
+//Напишете програма, която прочита 3 символа като използва тази функция и след
+//това извежда само тези от трите символа, които са цифри.
+
+
+
+#include <stdio.h>
+
+char readC()
+
+//дефиниране на функция
+{
+    char A;
+    do {
+    scanf("%c",&A);
+    } while(A == '\n');
+    return(A);
+}
+
+int main()
+{
+ 
+ int i;
+ //char Sim2= readC();
+// char Sim3= readC();
+
+for(i=0;i<3;i++)
+ 
+ {
+     char Sim1= readC();
+ 
+ if (Sim1>='0' && Sim1<='9')
+ {
+     printf("%d\n",Sim1 );
+ }
+ else 
+ {
+     printf("You are entering the wrong character\n");
+ }
+ }
+    
+ return 0;   
+}
+ 
+ 
+Напишете функция с име void S(int a, int b), която отпечатва лицето на
+правоъгълник със страни a и b. Да се напише програма, която по зададени 4
+цели числа, намира лицата на всички възможни правоъгълници, чрез написаната
+функция, след което отпечатва страните на този правоъгълник, който има найголямо лице. Ако такива правоъгълници са няколко, показва ги всичките.
+
+#include <stdio.h>
+
+int S(int a, int b)
+{
+    int c=a*b;
+    
+    printf("%d\n",c);
+    return c;
+}
+
+int main()
+{
+    int N1;
+    int N2;
+    int N3;
+    int N4;
+    
+    scanf("%d\n%d\n%d\n%d", &N1,&N2,&N3,&N4);
+    
+  int Max[6];
+    Max[0]=S(N1, N2);
+    Max[1]=S(N1, N3);
+    Max[2]=S(N1, N4);
+    Max[3]=S(N2, N3);
+    Max[4]=S(N2, N4);
+    Max[5]=S(N3, N4);
+  int i;
+  
+  int CurrMax=Max[0];
+  for(i=0;i<6;i++)
+  {
+      if (CurrMax<Max[i])
+      {
+          CurrMax=Max[i];
+      }
+   
+ 
+  }
+  printf("max is %d\n=", CurrMax);
+
+    return 0;
+}
