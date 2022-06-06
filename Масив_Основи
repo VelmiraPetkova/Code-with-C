@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define Size 2
+int main()
+{
+    float A[Size];
+    int i;
+    
+    for(i=0;i<Size;i++) //Първия цикъл пълни масива
+    {
+        printf("Enter num [%d]=",i);
+        scanf("%f",&A[i]);
+    
+    }
+    for(i=0;i<Size;i++) //Чете масива 
+    {
+       printf("A[%d]=%f\n",i,A[i]); 
+    }
+
+//
+return 0;
+}
