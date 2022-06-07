@@ -1,0 +1,26 @@
+//Напишете програма, която чете 10 цели числа от клавиатурата, 
+//запазва ги в масив и ги принтира в обратен ред.
+
+#include <stdio.h>
+#define Size 5
+int main()
+{
+    float A[Size];
+    int i;
+    
+    for(i=0;i<Size;i++)
+    {
+        printf("Enter num [%d]=", i);
+        scanf("%f",&A[i]);
+    }
+   // float B=i-1;
+    for (i=4;i>=0;i--)
+    {
+       
+        
+        printf("%f\n",A[i]);
+        
+    }
+   
+   return 0;
+}
