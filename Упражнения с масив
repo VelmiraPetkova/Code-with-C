@@ -24,3 +24,31 @@ int main()
    
    return 0;
 }
+
+----------------------
+//5. Напишете програма, която чете 10 реални числа от 
+//клавиатурата, запазва ги в масив и намира тяхната сума
+
+#include <stdio.h>
+#define Size 5
+int main()
+{
+    float A[Size];
+    int i;
+    
+    for(i=0;i<Size;i++)
+    {
+        printf("Enter num [%d]=",i );
+        scanf("%f", &A[i]);
+    }
+    float sSum;
+    for(i=0;i<Size;i++)
+    {
+        sSum=A[i]+sSum;
+        //i++;
+        //sSum=sSum+i;
+    }
+
+printf("%f", sSum);
+return 0;
+}
