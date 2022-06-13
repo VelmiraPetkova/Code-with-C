@@ -250,3 +250,30 @@ int main()
      printf("%d",sum_num);
     return 0;
 }
+
+-------------------
+/*Да се намери броя на цифрите на цяло число*/
+
+#include <stdio.h>
+int main()
+{
+    int num;
+    
+    printf("Enter the num:\t");
+    scanf ("%d",&num);
+    
+    //int sum_num;
+    int i=0;
+    
+    while(num>0)
+    {
+      
+            num=num/10;
+            i++;
+   
+        //printf("%d",i);
+
+    } 
+    printf("%d",i);
+    return 0;
+}
