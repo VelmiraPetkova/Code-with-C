@@ -1,0 +1,51 @@
+Да се напише функция,която чете реално число и връща прочетеното число като стойност на функцията. Да се напише програма , която прочита 3
+реални чесла с помоща на функцията.И отпечатва тяхното произведение;
+
+
+#include <stdio.h>
+
+float readR()
+{
+    float a;
+    printf("Enter num:\t");
+    scanf("%f",&a);
+    
+    return a;
+}
+
+int main()
+{
+    //readR();
+    printf("%f\n",readR());
+    printf("%f\n",readR());
+    printf("%f\n",readR());
+    
+    return 0;
+    
+}
+----------------------------
+#include <stdio.h>
+
+float readR()
+{
+    float a;
+    printf("Enter num:\t");
+    scanf("%f",&a);
+    
+    return a;
+}
+
+int main()
+{
+    float x=readR();
+    float b=readR();
+    float c=readR();
+    
+    float pro=x*b*c;
+    
+    printf("%f\n",pro);
+   
+    
+    return 0;
+    
+}
