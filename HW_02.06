@@ -1,0 +1,225 @@
+#include <stdio.h>
+
+int day() //зависи от int
+{
+    int day_b; //number of tay
+    printf("Please enter the number of days:\t");
+    scanf("%d",&day_b);
+    
+    int week=day_b/7;
+    return week;
+    
+}
+
+
+int main()
+{
+    int work_day=day()*5;
+    
+    
+    //work_day==week*5;
+    printf("Of the listed days, the working days are-%d\t", work_day);
+    return 0;
+    
+}
+-----------------------
+#include <stdio.h>
+
+int yYear()
+{
+    int year;
+    printf("Enter the Year:\t");
+    scanf("%d", &year);
+    int February_day;
+    if(year%4 || year%400==0)
+    {
+       February_day=28;
+    }
+    else
+    {
+      February_day=29;  
+    }
+
+    return February_day;
+}
+
+int main()
+{
+    int d;
+    printf("Enter number days:\t");
+    scanf("%d", &d);
+
+    switch(d)
+    {
+        case d<=31:
+        printf("January\n");
+        break;
+        
+        case d==31 + yYear():
+       printf("february\n");
+        break;
+    }
+    
+    return 0;
+    
+}
+-----------------------
+#include <stdio.h>
+
+int yYear(int year)
+{
+   // int year;
+   // printf("Enter the Year:\t");
+  //  scanf("%d", &year);
+    int February_day;
+    if(year%4==0 || year%400==0)
+    {
+       February_day=29;
+    }
+    else
+    {
+      February_day=28;  
+    }
+
+    return February_day;
+}
+
+int main()
+{
+    int d;
+    int year;
+   printf("Enter the Year:\t");
+   scanf("%d", &year);
+   printf("Enter number days:\t");
+   scanf("%d", &d);
+  
+   int Mon[12]={31,yYear(year),31,30,31,30,31,31,30,31,30,31};
+   int i;
+   for(i=0;i<12;i++)
+   {
+       if(d>Mon[i])
+       {
+          d= d-Mon[i];
+       }
+       else
+       {
+           printf("%d",i+1);
+           return 0;
+       }
+    
+       
+   }
+    return 0;
+    
+}
+
+
+
+
+
+
+
+
+---------------------------
+#include <stdio.h>
+
+float degrees()
+{
+    float F;
+    printf("Enter degreed of Fahrenheit:\t");
+    scanf("%f", &F);
+    
+    float C=(F-32)/1.8;
+    
+    return C;
+}
+
+int main()
+{
+    float a=degrees();  //float a,b,c
+    
+    if (a>0)
+    {
+        printf("The tempreture is: %f\n%f\n%f\n",a,b,c);
+    }
+    
+    return 0;
+    
+}
+
+-----------------
+#include <stdio.h>
+
+int even_number()
+{
+    int a;
+    if(a%2==0)
+    {
+        return a;
+    }
+}
+///////////////////
+int main()
+{
+    int Mas[5];
+    int i;
+    
+    for (i=0;i<5;i++)
+    {
+        printf("Enter num:[%d]=",i);
+        scanf("%d", &Mas[i]);
+    }
+
+    int Sum;
+    for(i=0;i<5;i++)
+    {
+       if(even_number())
+       {
+           Sum=Mas[i];
+           Sum=Sum+Mas[i]; 
+       }
+      printf("%d",Sum);
+    }
+   
+   return 0; 
+}
+
+-------------------------------
+#include <stdio.h>
+
+int even_number(int a)
+{
+    
+    if(a%2==0)
+    {
+        return 1;
+    }
+        return 0;
+}
+
+
+///////////////////
+int main()
+{
+    int Mas[5];
+    int i;
+    
+    for (i=0;i<5;i++)
+    {
+        printf("Enter num:[%d]=",i);
+        scanf("%d", &Mas[i]);
+    }
+
+    int Sum=0;
+    for(i=0;i<5;i++)
+    {
+       if(even_number(Mas[i]))
+       {
+           Sum=Sum+Mas[i]; 
+       }
+      
+    }
+    printf("%d",Sum);
+   
+   return 0; 
+}
