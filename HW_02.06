@@ -223,3 +223,43 @@ int main()
    
    return 0; 
 }
+
+---------------------------
+#include <stdio.h>
+
+float Min(float a,float b)
+{
+    if(a<b)
+    {
+        return a;
+    }
+        return b;
+}
+//////////////////////////
+int day(int d)
+{
+    return d;
+}
+///////////////////////////
+int main()
+{
+    float Price[7];
+    int i;
+    
+    for(i=0;i<7;i++)
+    {
+        printf("Enter the price [%d]=", i);
+        scanf("%f", &Price[i]);
+    }
+    float temp=Price[0];
+    for(i=0;i<7;i++)
+    {
+       if(Price[i]<temp)
+       {
+           temp=Price[i];
+       }
+    }
+    
+    printf("%f",Price[i]);
+    return 0;
+}
