@@ -1,0 +1,46 @@
+--Simple calculator
+
+#include <stdio.h>
+int main ()
+{
+    float X;
+    float Y;
+    char Znak;
+    float Z;
+    
+    printf("Enter Operator:\t");
+    scanf("%c",&Znak);
+    printf("Enter Operand x:\t");
+    scanf("%f", &X);
+    printf("Enter Operand Y:\t");
+    scanf("%f",&Y);
+    
+    switch(Znak)
+    {
+        case '+':
+        Z=X+Y;
+        break;
+        
+        case '-':
+        Z=X-Y;
+        break;
+        
+        case '*':
+        Z=X*Y;
+        break;
+        
+        case '/':
+            if (Y==0)
+            {
+                printf("Error\n");
+                
+            }
+            else 
+            {
+                Z=X/Y;
+            }
+        break;
+    }
+    printf("%f",Z);
+    return 0;
+    }
